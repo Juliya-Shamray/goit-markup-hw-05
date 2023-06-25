@@ -72,7 +72,7 @@ body {
 .active-link::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     display: inline-block;
     width: 100%;
@@ -451,9 +451,7 @@ body {
     gap: 16px;
 }
 
-.footer-social-link {
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 
 .footer-social-link:hover,
 .footer-social-link:focus {
@@ -480,7 +478,7 @@ body {
 .portfolio-filter .button {
     padding: 12px 24px;
     border: 1px solid var(--cornflower);
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-filter .button:hover,
@@ -558,7 +556,11 @@ body {
     width: 100%;
     height: 100%;
     top: 0;
+    left: 0;
+    z-index: 100;
     background-color: var(--modal-bg);
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -573,10 +575,33 @@ body {
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
 }
 
-.is-hidden {
+.backdrop.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+}
+
+.button-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background-color: var(--cornflower);
+    padding: 0;
+    color: var(--navy-blue);
+    cursor: pointer;
+
+}
+
+.icon-close {
+    fill: currentColor
 }
 
 /* ======================= End  Modal ======================= */
