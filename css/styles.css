@@ -71,12 +71,13 @@ body {
 
 .menu-link.active-link {
     color: var(--ocean);
+    position: relative;
 }
 
 .active-link::after {
     content: "";
     position: absolute;
-    bottom: -1px;
+    bottom: -2.5px;
     left: 0;
 
     display: block;
@@ -215,12 +216,13 @@ body {
 
 }
 
+
 .menu-item:not(:last-child) {
     margin-right: 40px;
 }
 
 .menu-link {
-    position: relative;
+
     padding-top: 24px;
     padding-bottom: 24px;
 
@@ -598,6 +600,7 @@ body {
     position: absolute;
     left: 50%;
     top: 50%;
+
     transform: translate(-50%, -50%);
     width: 408px;
     min-height: 584px;
@@ -605,6 +608,7 @@ body {
     border-radius: 4px;
     background-color: var(--dairy);
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
