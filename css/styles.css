@@ -69,6 +69,11 @@ body {
     overflow: hidden;
 }
 
+.menu-link.active-link {
+    color: var(--ocean);
+
+}
+
 .active-link::after {
     content: "";
     position: absolute;
