@@ -74,6 +74,8 @@ body {
     position: relative;
 }
 
+
+
 .active-link::after {
     content: "";
     position: absolute;
@@ -207,6 +209,7 @@ body {
 }
 
 .page-nav {
+
     display: flex;
     align-items: center;
 }
@@ -222,9 +225,9 @@ body {
 }
 
 .menu-link {
-
+    position: relative;
     padding-top: 24px;
-    padding-bottom: 24px;
+    padding-bottom: 25px;
 
     font-style: normal;
     font-weight: 500;
